@@ -33,3 +33,60 @@ public class MarketShare {
 }
 
 //booleans
+public class Booleans {
+	public static void main(String[] args) {    
+    boolean intsCanHoldDecimals = false;
+    System.out.println(intsCanHoldDecimals);
+	}
+}
+
+//char
+public class Char {
+	public static void main(String[] args) {   
+    char expectedGrade = 'A';
+    System.out.println(expectedGrade);
+	}
+}
+
+//String
+public class Song {
+	public static void main(String[] args) {   
+    String openingLyrics = "Yesterday, all my troubles seemed so far away";
+    System.out.println(openingLyrics);
+	}
+}
+
+//Static Checking
+public class Mess {
+	public static void main(String[] args) {   
+		int year = 2001;
+    String title = "Shrek";
+    char genre = 'C';
+    double runtime = 1.58;
+    boolean isPG = true;
+	}
+}
+
+//Naming
+public class BadNames {
+	public static void main(String[] args) {   
+		String firstName = "Samira";
+    String blah = "Smith";
+    String dotCom = "samira@google.com";
+    int salaryexpectation = 100000;
+    int yearOfBirth = 1955;
+    
+    System.out.println("The program runs!");
+	}
+}
+
+//Review
+public class MyProfile {
+	public static void main(String[] args) {   
+    String name = "Chris";
+    int age = 38;
+    double desiredSalary = 62700.00;
+    char gender = 'm';
+    boolean lookingForJob = true;
+	}
+}

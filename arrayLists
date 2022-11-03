@@ -1,0 +1,231 @@
+//Introduction
+import java.util.Arrays;
+
+class Shopping {
+  
+  public static void main(String[] args) {
+    
+    String[] groceryItems = {"steak", "milk", "jelly beans"};
+    double[] prices = {25.00, 2.95, 2.50};
+    
+    // Adding ham to the groceries
+    groceryItems[3] = "ham";
+    prices[3] = 4.99;
+    
+  }
+  
+}
+//This is exciting info!
+
+//Creating ArrayLists
+// import the ArrayList package here:
+import java.util.ArrayList;
+
+class ToDos {
+  
+  public static void main(String[] args) {
+    
+    // Create toDoList below:
+    ArrayList<String> toDoList = new ArrayList<String>();
+    
+  }
+  
+}
+
+//Adding an Item
+import java.util.ArrayList;
+
+class ToDos {
+    
+  public static void main(String[] args) {
+    
+    ArrayList<String> toDoList = new ArrayList<String>();
+    String toDo1 = "Water plants";
+    // Add more to-dos here:
+    String toDo2 = "codecademy";
+    String toDo3 = "Physical therapy";
+    // Add to-dos to toDoList
+    toDoList.add(toDo1);
+    toDoList.add(toDo2);
+    toDoList.add(toDo3);  
+    System.out.println(toDoList);
+      
+    
+  }
+  
+}
+
+//ArrayList Size
+import java.util.ArrayList;
+
+class ToDos {
+    
+  public static void main(String[] args) {
+    
+    // Sherlock
+    ArrayList<String> sherlocksToDos = new ArrayList<String>();
+    
+    sherlocksToDos.add("visit the crime scene");
+    sherlocksToDos.add("play violin");
+    sherlocksToDos.add("interview suspects");
+    sherlocksToDos.add("solve the case");
+    sherlocksToDos.add("apprehend the criminal");
+    
+    // Poirot
+    ArrayList<String> poirotsToDos = new ArrayList<String>();
+    
+    poirotsToDos.add("visit the crime scene");
+    poirotsToDos.add("interview suspects");
+    poirotsToDos.add("let the little grey cells do their work");
+    poirotsToDos.add("trim mustache");
+    poirotsToDos.add("call all suspects together");
+    poirotsToDos.add("reveal the truth of the crime");
+    
+    // Print the size of each ArrayList below:
+    System.out.println(sherlocksToDos.size());
+    System.out.println(poirotsToDos.size());  
+    // Print the name of the detective with the larger to-do list:
+    System.out.println("Poirot");
+  }
+  
+}
+
+//Accessing an Index
+import java.util.ArrayList;
+
+class ToDos {
+    
+  public static void main(String[] args) {
+    
+    // Sherlock
+    ArrayList<String> sherlocksToDos = new ArrayList<String>();
+    
+    sherlocksToDos.add("visit the crime scene");
+    sherlocksToDos.add("play violin");
+    sherlocksToDos.add("interview suspects");
+    sherlocksToDos.add("solve the case");
+    sherlocksToDos.add("apprehend the criminal");
+    
+    // Poirot
+    ArrayList<String> poirotsToDos = new ArrayList<String>();
+    
+    poirotsToDos.add("visit the crime scene");
+    poirotsToDos.add("interview suspects");
+    poirotsToDos.add("let the little grey cells do their work");
+    poirotsToDos.add("trim mustache");
+    poirotsToDos.add("call all suspects together");
+    poirotsToDos.add("reveal the truth of the crime");
+    
+    System.out.println("Sherlock's third to-do:");
+    // Print Sherlock's third to-do:
+    System.out.println(sherlocksToDos.get(2));
+    
+    System.out.println("\nPoirot's second to-do:");
+    // Print Poirot's second to-do:
+    System.out.println(poirotsToDos.get(1));
+    
+  }
+  
+}
+
+//Changing a Value
+import java.util.ArrayList;
+
+class ToDos {
+    
+  public static void main(String[] args) {
+    
+    // Sherlock
+    ArrayList<String> sherlocksToDos = new ArrayList<String>();
+    
+    sherlocksToDos.add("visit the crime scene");
+    sherlocksToDos.add("play violin");
+    sherlocksToDos.add("interview suspects");
+    sherlocksToDos.add("solve the case");
+    sherlocksToDos.add("apprehend the criminal");
+    
+    // Poirot
+    ArrayList<String> poirotsToDos = new ArrayList<String>();
+    
+    poirotsToDos.add("visit the crime scene");
+    poirotsToDos.add("interview suspects");
+    poirotsToDos.add("let the little grey cells do their work");
+    poirotsToDos.add("trim mustache");
+    poirotsToDos.add("call all suspects together");
+    poirotsToDos.add("reveal the truth of the crime");
+    
+    // Set each to-do below:
+    sherlocksToDos.set(1, "listen to Dr. Watson for amusement");
+    poirotsToDos.set(3, "listen to Captain Hastings for amusement");
+    System.out.println("Sherlock's to-do list:");
+    System.out.println(sherlocksToDos.toString() + "\n");
+    System.out.println("Poirot's to-do list:");
+    System.out.println(poirotsToDos.toString());
+  }
+  
+}
+
+//Removing an Item
+import java.util.ArrayList;
+
+class ToDos {
+    
+  public static void main(String[] args) {
+    
+    // Sherlock
+    ArrayList<String> sherlocksToDos = new ArrayList<String>();
+    
+    sherlocksToDos.add("visit the crime scene");
+    sherlocksToDos.add("play violin");
+    sherlocksToDos.add("interview suspects");
+    sherlocksToDos.add("solve the case");
+    sherlocksToDos.add("apprehend the criminal");
+    
+    // Poirot
+    ArrayList<String> poirotsToDos = new ArrayList<String>();
+    
+    poirotsToDos.add("visit the crime scene");
+    poirotsToDos.add("interview suspects");
+    poirotsToDos.add("let the little grey cells do their work");
+    poirotsToDos.add("trim mustache");
+    poirotsToDos.add("call all suspects together");
+    poirotsToDos.add("reveal the truth of the crime");
+    
+    // Remove each to-do below:
+    sherlocksToDos.remove("visit the crime scene");
+    poirotsToDos.remove(0);
+    sherlocksToDos.remove(0);  
+    System.out.println(sherlocksToDos.toString() + "\n");
+    System.out.println(poirotsToDos.toString());
+  }
+  
+}
+
+//Getting an Item's Index
+import java.util.ArrayList;
+
+class ToDos {
+    
+  public static void main(String[] args) {
+    
+    // Sherlock
+    ArrayList<String> sherlocksToDos = new ArrayList<String>();
+    
+    sherlocksToDos.add("visit the crime scene");
+    sherlocksToDos.add("play violin");
+    sherlocksToDos.add("interview suspects");
+    sherlocksToDos.add("listen to Dr. Watson for amusement");
+    sherlocksToDos.add("solve the case");
+    sherlocksToDos.add("apprehend the criminal");
+    
+    sherlocksToDos.remove("visit the crime scene");
+    
+    // Calculate to-dos until case is solved:
+    int areWeDoneYet = sherlocksToDos.indexOf("solve the case");
+      
+    // Change the value printed:
+    System.out.println(areWeDoneYet);
+
+  }
+  
+}

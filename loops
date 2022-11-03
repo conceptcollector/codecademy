@@ -1,0 +1,159 @@
+//Introduction
+While We're Here
+//they're getting punny
+// Importing the Random library
+import java.util.Random;
+
+class LuckyFive {
+  
+  public static void main(String[] args) {
+    
+    // Creating a random number generator
+    Random randomGenerator = new Random();
+    
+    // Generate a number between 1 and 6
+    int dieRoll = randomGenerator.nextInt(6) + 1;
+
+    // Repeat while roll isn't 5
+    while (dieRoll != 5) {
+      System.out.println(dieRoll);
+      dieRoll = randomGenerator.nextInt(6) + 1;
+    }
+    
+  }
+  
+}
+
+//Incrementing While Loops
+class Coffee {
+  
+  public static void main(String[] args) {
+    
+    // initialize cupsOfCoffee
+    int cupsOfCoffee = 1;
+    // add while loop with counter
+    while (cupsOfCoffee <= 100) {
+      System.out.println("Fry drinks cup of coffee #" + cupsOfCoffee);
+      cupsOfCoffee ++;
+    }
+        
+    
+  }
+  
+}
+//who could have ever expected a coding school to make a Futurama reference? 😜
+
+//Using For Loops
+class Coffee {
+  
+  public static void main(String[] args) {
+    
+    for (int cupsOfCoffee = 1; cupsOfCoffee <= 100; cupsOfCoffee++) {
+      
+      System.out.println("Fry drinks cup of coffee #" + cupsOfCoffee);
+      
+    }
+    
+  }
+  
+}
+
+//Iterating Over Arrays and ArrayLists
+import java.util.ArrayList;
+
+class CalculateTotal {
+  
+  public static void main(String[] args) {
+    
+    ArrayList<Double> expenses = new ArrayList<Double>();
+    expenses.add(74.46);
+    expenses.add(63.99);
+    expenses.add(10.57);
+    expenses.add(81.37);
+    
+    double total = 0;
+    
+    // Iterate over expenses
+    for (int i = 0; i < expenses.size(); i++) {
+      total += expenses.get(i);
+    }
+    
+    System.out.println(total);
+    
+  }
+  
+}
+//oh yeah... .get()!
+
+//break and continue
+class Numbers {
+  public static void main(String[] args) {
+    for (int i = 0; i < 100; i++) {
+      // Add your code below
+      if (i % 5 != 0) {
+        continue;
+      }
+      System.out.println(i);
+      
+    }
+  }
+}
+//just learned a new way to use %!
+
+//For-Each Loops
+import java.util.ArrayList;
+
+class MostExpensive {
+  
+  public static void main(String[] args) {
+    
+    ArrayList<Double> expenses = new ArrayList<Double>();
+    expenses.add(74.46);
+    expenses.add(63.99);
+    expenses.add(10.57);
+    expenses.add(81.37);
+    
+    double mostExpensive = 0;
+    
+    // Iterate over expenses
+    for (double expense: expenses) {
+      if (expense > mostExpensive) {
+        mostExpensive = expense;
+      }
+    }
+    
+    System.out.println(mostExpensive);
+    
+  }
+  
+}
+
+//Removing Elements During Traversal
+import java.util.ArrayList;
+
+class Lunch {
+ 
+  public static ArrayList<String> removeAnts(ArrayList<String> lunchBox) {
+    // Add your code below
+   for (int i = 0; i < lunchBox.size(); i++) {
+     if (lunchBox.get(i) == "ant") {
+       lunchBox.remove(i);
+       i--;
+     }
+   }
+    return lunchBox;
+  }
+ 
+  
+  public static void main(String[] args) {
+    ArrayList<String> lunchContainer = new ArrayList<String>();
+    lunchContainer.add("apple");
+    lunchContainer.add("ant");
+    lunchContainer.add("ant");
+    lunchContainer.add("sandwich");
+    lunchContainer.add("ant");
+    lunchContainer = removeAnts(lunchContainer);
+    System.out.println(lunchContainer);
+
+  }
+}

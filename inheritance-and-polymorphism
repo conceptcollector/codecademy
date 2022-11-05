@@ -1,0 +1,112 @@
+//Inheritance in Practice
+//Noodle.java
+class Noodle {
+  
+  double lengthInCentimeters;
+  String shape;
+  String texture = "brittle";
+  
+  public void cook() {
+    
+    this.texture = "cooked";
+    
+  }
+  
+  public static void main(String[] args) {
+    Spaghetti spaghettiPomodoro = new Spaghetti();
+    System.out.println(spaghettiPomodoro.texture);
+  }
+  
+}
+
+//Spaghetti.java
+class Spaghetti extends Noodle {
+  
+}
+
+//Inheriting the Constructor
+//Noodle.java
+class Noodle {
+  
+  double lengthInCentimeters;
+  double widthInCentimeters;
+  String shape;
+  String ingredients;
+  String texture = "brittle";
+  
+  Noodle(double lenInCent, double wthInCent, String shp, String ingr) {
+    
+    this.lengthInCentimeters = lenInCent;
+    this.widthInCentimeters = wthInCent;
+    this.shape = shp;
+    this.ingredients = ingr;
+    
+  }
+  
+  public void cook() {
+    
+    this.texture = "cooked";
+    
+  }
+  
+  public static void main(String[] args) {
+    Pho phoChay = new Pho();
+    System.out.println(phoChay.shape);
+    
+  }
+  
+}
+
+//Pho.java
+class Pho extends Noodle {
+  Pho() {
+    super(30.0, 0.64, "flat", "rice flour");
+  }
+  
+  
+}
+
+//Parent Class Aspect Modifiers
+//Noodle.java
+public class Noodle {
+  
+  private double lengthInCentimeters;
+  private double widthInCentimeters;
+  private String shape;
+  protected String ingredients;
+  private String texture = "brittle";
+  
+  Noodle(double lenInCent, double wthInCent, String shp, String ingr) {
+    
+    this.lengthInCentimeters = lenInCent;
+    this.widthInCentimeters = wthInCent;
+    this.shape = shp;
+    this.ingredients = ingr;
+    
+  }
+  
+  public final boolean isTasty() {
+    
+    return true;
+    
+  }
+  
+  public static void main(String[] args) {
+    
+    Ramen yasaiRamen = new Ramen();
+    //System.out.println(yasaiRamen.ingredients);
+    System.out.println(yasaiRamen.isTasty());
+    
+  }
+  
+}
+
+//Ramen.java
+public class Ramen extends Noodle {
+  
+  Ramen() {
+    
+    super(30.0, 0.3, "flat", "wheat flour");
+    
+  }
+}

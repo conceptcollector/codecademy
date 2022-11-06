@@ -110,3 +110,153 @@ public class Ramen extends Noodle {
     
   }
 }
+
+//Method Overriding
+//Noodle.java
+class Noodle {
+  
+  protected double lengthInCentimeters;
+  protected double widthInCentimeters;
+  protected String shape;
+  protected String ingredients;
+  protected String texture = "brittle";
+  
+  Noodle(double lenInCent, double wthInCent, String shp, String ingr) {
+    
+    this.lengthInCentimeters = lenInCent;
+    this.widthInCentimeters = wthInCent;
+    this.shape = shp;
+    this.ingredients = ingr;
+    
+  }
+  
+  public void cook() {
+    
+    System.out.println("Boiling.");
+    
+    this.texture = "cooked";
+    
+  }
+  
+  public static void main(String[] args) {
+    
+    Spaetzle kaesespaetzle = new Spaetzle();
+    kaesespaetzle.cook();
+    
+  }
+  
+}
+
+//Spaetzle.java
+class Spaetzle extends Noodle {
+  
+  Spaetzle() {
+    
+    super(3.0, 1.5, "irregular", "eggs, flour, salt");
+    this.texture = "lumpy and liquid";
+    
+  }
+  
+  // Add the new cook() method below:
+    @Override
+    public void cook() {
+      System.out.print("Grinding or scraping dough.");
+    }
+  
+}
+
+//Using a Child Class as its Parent Class
+class Dinner {
+  
+  private void makeNoodles(Noodle noodle, String sauce) {
+    
+    noodle.cook();
+    
+    System.out.println("Mixing " + noodle.texture + " noodles made from " + noodle.ingredients + " with " + sauce + ".");
+    System.out.println("Dinner is served!");
+    
+  }
+  
+  public static void main(String[] args) {
+    
+    Dinner noodlesDinner = new Dinner();
+    // Add your code here:
+    Noodle biangBiang = new BiangBiang();
+    noodlesDinner.makeNoodles(biangBiang, "soy sauce and chili oil");
+    
+  }
+  
+}
+
+//Child Classes in Arrays and ArrayLists
+class Noodle {
+  
+  protected double lengthInCentimeters;
+  protected double widthInCentimeters;
+  protected String shape;
+  protected String ingredients;
+  protected String texture = "brittle";
+  
+  Noodle(double lenInCent, double wthInCent, String shp, String ingr) {
+    
+    this.lengthInCentimeters = lenInCent;
+    this.widthInCentimeters = wthInCent;
+    this.shape = shp;
+    this.ingredients = ingr;
+    
+  }
+  
+  public String getCookPrep() {
+    
+    return "Boil noodle for 7 minutes and add sauce.";
+    
+  }
+  
+  
+  public static void main(String[] args) {
+    
+    Noodle spaghetti, ramen, pho;
+    
+    spaghetti = new Spaghetti();
+    ramen = new Ramen();
+    pho = new Pho();
+    
+    // Add your code below:
+    Noodle[] allTheNoodles = {spaghetti, ramen, pho};
+
+    for (Noodle noodle : allTheNoodles) {
+      System.out.println(noodle.getCookPrep());
+    }
+    
+  }
+  
+}
+
+//Child Classes in Method Parameters
+class NoodleRestaurant {
+  String name;
+
+  public NoodleRestaurant(String customerName){
+    name = customerName;
+  }
+
+  public void order(Noodle noodle) {
+    System.out.println(noodle.getCookPrep());
+    System.out.println("Order for " + name + " is ready.");
+  }
+
+  public static void main(String[] args) {
+    Noodle ramen, pho;
+    ramen = new Ramen();
+    pho = new Pho();
+    
+    NoodleRestaurant customer1 = new NoodleRestaurant("Sagirah");
+    NoodleRestaurant customer2 = new NoodleRestaurant("Maritza");
+
+    // Add your code here
+    customer1.order(pho);
+    customer2.order(ramen);
+
+
+  }
+}

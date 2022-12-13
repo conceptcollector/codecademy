@@ -1,0 +1,19 @@
+// Printing using System.out
+
+import java.io.*;
+
+public class Introduction {
+  public static void main(String[] args) {
+    String name = "Chris";
+    String hobbies = "reading, writing, guitar, and code";
+    int age = 38;
+
+    System.out.println("My name is " + name);
+    System.out.printf("I am %d years old", age);
+    System.out.print("My hobbies are " + hobbies);
+  }
+}
+
+
+// The Scanner Class
+
